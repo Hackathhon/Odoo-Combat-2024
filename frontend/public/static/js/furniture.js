@@ -1,5 +1,3 @@
-// furniture.js
-
 document.addEventListener('DOMContentLoaded', () => {
     loadFurnitureList();
 
@@ -14,8 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let furnitureItems = [
-    { id: 1, name: 'Modern Sofa', price: 150, category: 'sofas', image: 'sofa.jpg' },
+    { id: 1, name: 'Modern Sofa', price: 150, category: 'sofas', image: 'frontend\Assets\chair (2).jpg  ' },
     { id: 2, name: 'Dining Table', price: 100, category: 'tables', image: 'table.jpg' },
+    { id: 3, name: 'Office Chair', price: 50, category: 'chairs', image: 'chair.jpg' },
     // Add more items as needed
 ];
 

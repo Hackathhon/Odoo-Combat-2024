@@ -24,3 +24,25 @@ function loadFeaturedFurniture() {
         featuredFurniture.appendChild(div);
     });
 }
+//new stuff    
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadCartItems();
+});
+
+function loadCartItems() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = '';
+
+    cartItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+            <img src="images/${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>Price: $${item.price}</p>
+        `;
+        cartItemsContainer.appendChild(div);
+    });
+}
