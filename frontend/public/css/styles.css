@@ -152,5 +152,7 @@ button:hover {
     background-color: #555;
 }
 #sopha{
-    
+    background-size: cover;
+    height: 200px;
+    width: 200px;
 }
