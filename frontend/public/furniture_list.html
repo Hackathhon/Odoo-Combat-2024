@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Furniture List</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Available Furniture</h2>
+        <input type="text" id="search" placeholder="Search for furniture...">
+        <div id="filters">
+            <label for="price-range">Price Range:</label>
+            <input type="range" id="price-range" min="0" max="1000">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="chairs">Chairs</option>
+                <option value="tables">Tables</option>
+                <option value="sofas">Sofas</option>
+            </select>
+        </div>
+        <div id="furniture-list"></div>
+    </main>
+    <footer class="footer">
+        &copy; 2024 Furniture Renting
+    </footer>
+    <script src="js/furniture.js"></script>
+</body>
+</html>
