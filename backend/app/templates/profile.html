@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='public/css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('furniture_list') }}">Furniture</a>
+            <a href="{{ url_for('cart') }}">Cart</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Profile</h2>
+        <form id="profile-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Update Profile</button>
+        </form>
+    </main>
+    <footer class="footer">
+        &copy; 2024 Furniture Renting
+    </footer>
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>

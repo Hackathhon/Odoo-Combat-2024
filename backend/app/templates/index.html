@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Renting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Furniture Renting</h1>
+        <nav>
+            <a href="{{ url_for('profile.profile') }}">Profile</a>
+            <a href="{{ url_for('furniture.furniture_list') }}">Furniture</a>
+            <a href="{{ url_for('cart.cart') }}">Cart</a>
+            <a href="{{ url_for('auth.login') }}">Login</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Featured Items Carousel -->
+        <section class="carousel">
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='frontend/Assets/sopha.jpg') }}" alt="Featured Item 1" id="sopha">
+                <div class="carousel-caption">
+                    <h2>Featured Item 1</h2>
+                    <p>Description or promotional message</p>
+                    <a href="{{ url_for('furniture', id=1) }}" class="btn">View Items</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/featured_item2.jpg') }}" alt="Featured Item 2">
+                <div class="carousel-caption">
+                    <h2>Featured Item 2</h2>
+                    <p>Description or promotional message</p>
+                    <a href="{{ url_for('furniture.furniture', id=2) }}" class="btn">View Item</a>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </section>
+        <!-- Promotional Banners or Deals -->
+        <section class="promotions">
+            <div class="promo-banner">
+                <img src="{{ url_for('static', filename='images/promo_banner1.jpg') }}" alt="Special Offer">
+                <div class="promo-caption">
+                    <h3>Special Offer</h3>
+                    <p>Get 20% off on selected items!</p>
+                    <a href="{{ url_for('furniture.furniture', category='sale') }}" class="btn">View Sale</a>
+                </div>
+            </div>
+            <!-- Add more promotional banners -->
+        </section>
+        <!-- Customer Testimonials -->
+        <section class="testimonials">
+            <h2>Customer Testimonials</h2>
+            <div class="testimonial">
+                <p>"Great service and quality furniture. Highly recommended!"</p>
+                <p>- John Doe</p>
+            </div>
+            <!-- Add more testimonials -->
+        </section>
+        <!-- Latest Arrivals -->
+        <section class="latest-arrivals">
+            <h2>Latest Arrivals</h2>
+            <div class="arrival-item">
+                <img src="{{ url_for('static', filename='images/new_arrival1.jpg') }}" alt="New Arrival 1">
+                <h3>New Arrival 1</h3>
+                <p>Description or details</p>
+                <a href="{{ url_for('furniture.furniture', id='new1') }}" class="btn">View Item</a>
+            </div>
+            <!-- Add more latest arrivals -->
+        </section>
+        <!-- Call-to-Action -->
+        <section class="cta">
+            <h2>Start Renting Now!</h2>
+            <a href="{{ url_for('furniture.furniture') }}" class="btn">Browse Furniture</a>
+            <a href="{{ url_for('contact') }}" class="btn">Contact Us</a>
+        </section>
+    </main>
+    <footer class="footer">
+        &copy; 2024 Furniture Renting
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

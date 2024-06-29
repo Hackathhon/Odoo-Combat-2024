@@ -15,9 +15,7 @@ login_manager.login_message_category = 'info'
 migrate = Migrate()
 
 def create_app():
-    app = Flask(__name__, 
-                template_folder='/Users/shreyasgandhi/odoo-hackathon/odoo/frontend/public', 
-                static_folder='/Users/shreyasgandhi/odoo-hackathon/odoo/frontend/public')
+    app = Flask(__name__)
     app.config['SECRET_KEY'] = 'your_secret_key'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///odoo.db'
 

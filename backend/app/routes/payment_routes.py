@@ -14,6 +14,5 @@ def pay(rental_id):
 
 @payment_bp.route("/payment_success")
 def payment_success():
-    # Handle payment success logic
     flash('Payment was successful!', 'success')
     return redirect(url_for('main.home'))

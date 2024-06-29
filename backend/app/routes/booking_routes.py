@@ -11,9 +11,9 @@ def book_item(item_id):
     item = Item.query.get_or_404(item_id)
     if not item.available:
         flash('Item is not available', 'danger')
-        return redirect(url_for('furniture.item', item_id=item_id))
+        return redirect(url_for('furniture.furniture_item', item_id=item_id))
     rental = Rental(user_id=current_user.id, item_id=item.id)
     db.session.add(rental)
     db.session.commit()
     flash('Item has been added to your cart', 'success')
-    return redirect(url_for('furniture.items'))
+    return redirect(url_for('furniture.furniture'))
